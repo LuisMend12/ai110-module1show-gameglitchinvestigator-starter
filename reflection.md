@@ -25,7 +25,7 @@ The AI suggested handling comparisons by converting the secret number to a strin
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed? I checked by running the streamlit app and then looking if the bug was fixed. For example, I checked to see if the new game button was working properly after getting a correct guess which in this case I reviewed and asserted that was the case.
-- Describe at least one test you ran (manual or using pytest)  
+- Describe at least one test you ran (manual or using pytest) I used pytest to check if the new game was properly working and also to check if the number of guess changed as the level of difficulty changed. 
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
