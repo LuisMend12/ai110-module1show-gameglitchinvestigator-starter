@@ -4,17 +4,21 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 ## 1. What was broken when you started?
 
-- What did the game look like the first time you ran it?
+- What did the game look like the first time you ran it? We were given a terrible hint, and when the game was over, the new game button doesn't work at all.
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
+  The range for the number is static and doesn't change even after changing the difficulty. Whenever we insert a guess, we keep getting an incorrect hint that doesn't help in figuring out the number.
 
 ---
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)? I used Claude to find and fix these bugs.
+Claude recommended keeping the “string secret glitch” behavior (sometimes converting secret to a string) and handling it with try/except TypeError + string comparisons.
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+The AI pointed out that the hint logic in check_guess() was reversed (it said “Go HIGHER” when the guess was already too high). I fixed the messages and verified it by testing guesses above and below the secret number to confirm the hints were confirm the hints were correct.
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+The AI suggested handling comparisons by converting the secret number to a string and comparing strings. This was misleading because string comparisons don’t follow numeric order (e.g., "9" > "10"). I verified the issue by testing guesses and noticing incorrect “Too High/Too Low” results, so I removed the string conversion and kept everything as integers.
 
 ---
 
