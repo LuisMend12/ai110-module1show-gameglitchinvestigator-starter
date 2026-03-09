@@ -25,13 +25,14 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [ ] Describe the game's purpose. It's a guessing game where the user is propmted to guess a random number. 
+- [ ] Detail which bugs you found. The range of guesses was static even after changing the level of difficulty, and after guessing correctly, the new game button didn't work at all. Also the hints that the game were given us were misleading and didn't help the user at all.
+- [ ] Explain what fixes you applied. Fixed the range of guesses, I also added actual helpful hints, and so fixed the new game button.
 
 ## 📸 Demo
 
 - [ ] [Insert a screenshot of your fixed, winning game here]
+![alt text](image.png)
 
 ## 🚀 Stretch Features
 

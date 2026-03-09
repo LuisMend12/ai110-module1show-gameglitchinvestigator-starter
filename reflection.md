@@ -33,15 +33,15 @@ The AI suggested handling comparisons by converting the secret number to a strin
 
 ## 4. What did you learn about Streamlit and state?
 
-- In your own words, explain why the secret number kept changing in the original app.
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-- What change did you make that finally gave the game a stable secret number?
+- In your own words, explain why the secret number kept changing in the original app. This was because of streamlit because every time the user interacts with the app by clicking a butotn, the entire python script reruns from top to button.
+- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit? May use an example like a word document that deletese its content after typing a character, or a videogame that deletes all game progress each time they complete a quest, and a session state is like chest where we can store loot and he gets to keep even after all his progress is deleted.
+- What change did you make that finally gave the game a stable secret number? The fix was moving the secret number into st.session_state in that way we get to keep our secret number even after streamlit reruns.
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
+- What is one habit or strategy from this project that you want to reuse in future labs or projects? Always test the core logic functions with pytest before trusting the UI. 
   - This could be a testing habit, a prompting strategy, or a way you used Git.
-- What is one thing you would do differently next time you work with AI on a coding task?
-- In one or two sentences, describe how this project changed the way you think about AI generated code.
+- What is one thing you would do differently next time you work with AI on a coding task? Ask the AI to explain why before applying its suggestion, so in that way I can better understand the code and avoid making a new bug instead of fixing the previous one.
+- In one or two sentences, describe how this project changed the way you think about AI generated code. AI-generated code looks correct at a glance but can have subtle logical errors that only show up at runtime. So it's always good to check for this bugs and understand the code that AI generated.
