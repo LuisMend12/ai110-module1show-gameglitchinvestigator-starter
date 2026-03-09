@@ -35,6 +35,7 @@ def parse_guess(raw: str):
 def check_guess(guess: int, secret: int):
     if guess == secret:
         return "Win", "🎉 Correct!"
+    # FIXME: Logic breaks here — hints were reversed (> returned "Too Low" and vice versa)
     if guess > secret:
         return "Too High", "📉 Too high — go LOWER!"
     return "Too Low", "📈 Too low — go HIGHER!"
@@ -101,6 +102,8 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
+# FIXME: Logic breaks here — st.rerun() was missing, so the button reset state but the UI
+# didn't refresh, leaving stale game-over messages and old input visible
 if new_game:
     start_new_game(difficulty)
     st.success("New game started.")
